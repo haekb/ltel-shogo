@@ -1,0 +1,7 @@
+*Debug/
+*Release/
+*.pdb
+*.dll
+*.lto
+*.ilk
+*.vs/

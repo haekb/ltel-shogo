@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Shared">
+      <UniqueIdentifier>{063993cc-5a76-41a3-8123-42d3ba7b8ee7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Misc">
+      <UniqueIdentifier>{e9e14ee8-71d1-48f8-a13e-08eceffcd2ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Shared">
+      <UniqueIdentifier>{12d41807-aadc-4669-9dfe-e3ff4122c112}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AppHeaders">
+      <UniqueIdentifier>{ac0cf1e0-ed42-4a00-9852-00fa241f535d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AppHeaders">
+      <UniqueIdentifier>{7b84faef-092a-4d36-b9ba-ac2a57a6f9c0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Shared\CharacterAlignment.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\CheatDefs.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\ClientRes.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\ClientServerShared.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\ContainerCodes.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\DebrisTypes.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\GibTypes.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\ModelFuncs.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\ModelIds.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NetDefs.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\PlayerModeTypes.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\ProjectileFXTypes.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\RiotCommandIDs.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\RiotCommonUtilities.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\RiotMsgIDs.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\RiotSoundTypes.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\SFXMsgIds.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\SharedMovement.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\SurfaceTypes.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\WeaponDefs.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\WeaponFXTypes.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Misc\GameSpyMgr.h">
+      <Filter>Header Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Misc\server_interface.h">
+      <Filter>Header Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\aggregate_de.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\basedefs_de.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\basetypes_de.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\client_de.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\clientshell_de.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\common_de.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\cpp_aggregate_de.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\cpp_client_de.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\cpp_clientshell_de.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\cpp_engineobjects_de.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\cpp_server_de.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\cpp_servershell_de.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\CSBase.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\de_client.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\de_codes.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\de_server.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\dlink.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\dstream.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\DVector.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\engineobjects_de.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\generic_msg_de.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\lmessage.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\matrix_ops.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\physics_lt.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\server_de.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\serverobj_de.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\servershell_de.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppHeaders\specialeffect_de.h">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Shared\DebrisTypes.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\ModelFuncs.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\RiotCommonUtilities.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\WeaponDefs.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AppHeaders\engineobjects.c">
+      <Filter>Header Files\AppHeaders</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AppHeaders\cpp_engineobjects_de.cpp">
+      <Filter>Source Files\AppHeaders</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Demo Debug|Win32">
+      <Configuration>Demo Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Demo Release|Win32">
+      <Configuration>Demo Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Korean Release|Win32">
+      <Configuration>Korean Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D63C331F-D44A-4832-B71B-6DA91C398411}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Demo Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Demo Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Korean Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Demo Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Demo Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Korean Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Korean Release|Win32'">
+    <OutDir>.\RiotCli3\</OutDir>
+    <IntDir>.\RiotCli3\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Demo Release|Win32'">
+    <OutDir>.\RiotCli2\</OutDir>
+    <IntDir>.\RiotCli2\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Demo Debug|Win32'">
+    <OutDir>.\RiotCli1\</OutDir>
+    <IntDir>.\RiotCli1\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>..\appheaders;..\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;RIOT_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\RiotClientShell.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\RiotClientShell.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\RiotClientShell.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>..\Shogo\CShell.dll</OutputFile>
+      <ImportLibrary>.\Release\CShell.lib</ImportLibrary>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Korean Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>..\appheaders;..\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_KOREAN;WIN32;_WINDOWS;RIOT_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\RiotCli3\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\RiotCli3\RiotClientShell.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\RiotCli3\</ObjectFileName>
+      <ProgramDataBaseFileName>.\RiotCli3\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\RiotCli3\RiotClientShell.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\RiotCli3\RiotClientShell.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>..\Shogo\CShell.dll</OutputFile>
+      <ImportLibrary>.\RiotCli3\CShell.lib</ImportLibrary>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Demo Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>..\appheaders;..\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_DEMO;WIN32;_WINDOWS;RIOT_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\RiotCli2\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\RiotCli2\RiotClientShell.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\RiotCli2\</ObjectFileName>
+      <ProgramDataBaseFileName>.\RiotCli2\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\RiotCli2\RiotClientShell.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\RiotCli2\RiotClientShell.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>\Games\ShogoDemo\ShogoDem\CShell.dll</OutputFile>
+      <ImportLibrary>.\RiotCli2\CShell.lib</ImportLibrary>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Demo Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\appheaders;..\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_DEMO;WIN32;_WINDOWS;RIOT_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\RiotCli1\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\RiotCli1\RiotClientShell.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\RiotCli1\</ObjectFileName>
+      <ProgramDataBaseFileName>.\RiotCli1\</ProgramDataBaseFileName>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy Debug\CShell.pdb ..\*.*</Command>
+      <Message>Copying                                                                                                                                                                     ClientShell.pdb                                                                                                                                                                                           to                                                                                                                                                     ..\</Message>
+    </PostBuildEvent>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\RiotCli1\RiotClientShell.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\RiotCli1\RiotClientShell.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>\Games\ShogoDemo\ShogoDem\CShell.dll</OutputFile>
+      <ImportLibrary>.\RiotCli1\CShell.lib</ImportLibrary>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\shared;..\appheaders;D:\directx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;RIOT_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Debug\RiotClientShell.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy Debug\CShell.pdb ..\*.*</Command>
+      <Message>Copying                                                                                                                                                                     ClientShell.pdb                                                                                                                                                                                           to                                                                                                                                                     ..\</Message>
+    </PostBuildEvent>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\RiotClientShell.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\RiotClientShell.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>..\Shogo\CShell.dll</OutputFile>
+      <ImportLibrary>.\Debug\CShell.lib</ImportLibrary>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Shared\DebrisTypes.cpp" />
+    <ClCompile Include="..\Shared\ModelFuncs.cpp" />
+    <ClCompile Include="..\Shared\RiotCommonUtilities.cpp" />
+    <ClCompile Include="..\Shared\WeaponDefs.cpp" />
+    <ClCompile Include="AnimeLineFX.cpp" />
+    <ClCompile Include="BaseLineSystemFX.cpp" />
+    <ClCompile Include="BaseMenu.cpp" />
+    <ClCompile Include="BaseParticleSystemFX.cpp" />
+    <ClCompile Include="BaseScaleFX.cpp" />
+    <ClCompile Include="BitmapFont.cpp" />
+    <ClCompile Include="BulletTrailFX.cpp" />
+    <ClCompile Include="CastLineFX.cpp" />
+    <ClCompile Include="ClientInfoMgr.cpp" />
+    <ClCompile Include="ClientUtilities.cpp" />
+    <ClCompile Include="ClientWeaponUtils.cpp" />
+    <ClCompile Include="client_physics.cpp" />
+    <ClCompile Include="CMoveMgr.cpp" />
+    <ClCompile Include="Credits.cpp" />
+    <ClCompile Include="CreditsWin.cpp" />
+    <ClCompile Include="CriticalHitFX.cpp" />
+    <ClCompile Include="DeathFX.cpp" />
+    <ClCompile Include="DebrisFX.cpp" />
+    <ClCompile Include="DetailSettingsMenu.cpp" />
+    <ClCompile Include="DisplayModeMenu.cpp" />
+    <ClCompile Include="DisplayOptionsMenu.cpp" />
+    <ClCompile Include="DynamicLightFX.cpp" />
+    <ClCompile Include="ExplosionFX.cpp" />
+    <ClCompile Include="GibFX.cpp" />
+    <ClCompile Include="InfoDisplay.cpp" />
+    <ClCompile Include="IpMgr.cpp" />
+    <ClCompile Include="JoystickMenu.cpp" />
+    <ClCompile Include="JuggernautFX.cpp" />
+    <ClCompile Include="KeyboardMenu.cpp" />
+    <ClCompile Include="KeyFixes.cpp" />
+    <ClCompile Include="LaserCannonFX.cpp" />
+    <ClCompile Include="LightFX.cpp" />
+    <ClCompile Include="LightScaleMgr.cpp" />
+    <ClCompile Include="LineBallFX.cpp" />
+    <ClCompile Include="LoadLevelMenu.cpp" />
+    <ClCompile Include="LoadSavedLevelMenu.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="MarkSFX.cpp" />
+    <ClCompile Include="MessageBox.cpp" />
+    <ClCompile Include="MessageMgr.cpp" />
+    <ClCompile Include="MissionObjectives.cpp" />
+    <ClCompile Include="MouseMenu.cpp" />
+    <ClCompile Include="Music.cpp" />
+    <ClCompile Include="NetInfo.cpp" />
+    <ClCompile Include="NetStart.cpp" />
+    <ClCompile Include="NewGameMenu.cpp" />
+    <ClCompile Include="OptionsMenu.cpp" />
+    <ClCompile Include="ParticleExplosionFX.cpp" />
+    <ClCompile Include="ParticleSystemFX.cpp" />
+    <ClCompile Include="ParticleTrailFX.cpp" />
+    <ClCompile Include="ParticleTrailSegmentFX.cpp" />
+    <ClCompile Include="PickupItemFX.cpp" />
+    <ClCompile Include="plasma1.cpp" />
+    <ClCompile Include="PlayerCamera.cpp" />
+    <ClCompile Include="PlayerFX.cpp" />
+    <ClCompile Include="PlayerInventory.cpp" />
+    <ClCompile Include="PlayerStats.cpp" />
+    <ClCompile Include="PolyGridFX.cpp" />
+    <ClCompile Include="PopupMenu.cpp" />
+    <ClCompile Include="ProjectileFX.cpp" />
+    <ClCompile Include="RiotClientShell.cpp" />
+    <ClCompile Include="RiotMenu.cpp" />
+    <ClCompile Include="RiotSettings.cpp" />
+    <ClCompile Include="RocketFlareFX.cpp" />
+    <ClCompile Include="SaveLevelMenu.cpp" />
+    <ClCompile Include="SFXMgr.cpp" />
+    <ClCompile Include="SFXReg.cpp" />
+    <ClCompile Include="ShellCasingFX.cpp" />
+    <ClCompile Include="SinglePlayerMenu.cpp" />
+    <ClCompile Include="Slider.cpp" />
+    <ClCompile Include="SmokeFX.cpp" />
+    <ClCompile Include="SmokeSphereFX.cpp" />
+    <ClCompile Include="SoundOptionsMenu.cpp" />
+    <ClCompile Include="Sparam.cpp" />
+    <ClCompile Include="SparksFX.cpp" />
+    <ClCompile Include="SpriteFX.cpp" />
+    <ClCompile Include="TextHelper.cpp" />
+    <ClCompile Include="TracerFX.cpp" />
+    <ClCompile Include="VKDefs.cpp" />
+    <ClCompile Include="WeaponFX.cpp" />
+    <ClCompile Include="WeaponFXLow.cpp" />
+    <ClCompile Include="WeaponFXMed.cpp" />
+    <ClCompile Include="WeaponModel.cpp" />
+    <ClCompile Include="WeaponSoundFX.cpp" />
+    <ClCompile Include="WinUtil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Shared\ClientRes.h" />
+    <ClInclude Include="..\Shared\WeaponDefs.h" />
+    <ClInclude Include="AnimeLineFX.h" />
+    <ClInclude Include="BaseLineSystemFX.h" />
+    <ClInclude Include="BaseMenu.h" />
+    <ClInclude Include="BaseParticleSystemFX.h" />
+    <ClInclude Include="BaseScaleFX.h" />
+    <ClInclude Include="BitmapFont.h" />
+    <ClInclude Include="BulletTrailFX.h" />
+    <ClInclude Include="CameraFX.h" />
+    <ClInclude Include="CastLineFX.h" />
+    <ClInclude Include="CharacterAlignment.h" />
+    <ClInclude Include="CheatDefs.h" />
+    <ClInclude Include="ClientInfoMgr.h" />
+    <ClInclude Include="ClientServerShared.h" />
+    <ClInclude Include="ClientUtilities.h" />
+    <ClInclude Include="client_physics.h" />
+    <ClInclude Include="CMoveMgr.h" />
+    <ClInclude Include="ContainerCodes.h" />
+    <ClInclude Include="ControlsMenu.h" />
+    <ClInclude Include="CriticalHitFX.h" />
+    <ClInclude Include="CustomSettingsMenu.h" />
+    <ClInclude Include="DeathFX.h" />
+    <ClInclude Include="DebrisFX.h" />
+    <ClInclude Include="DebrisTypes.h" />
+    <ClInclude Include="DisplayOptionsMenu.h" />
+    <ClInclude Include="DynamicLightFX.h" />
+    <ClInclude Include="DynArray.h" />
+    <ClInclude Include="ExplosionFX.h" />
+    <ClInclude Include="Font08.h" />
+    <ClInclude Include="Font12.h" />
+    <ClInclude Include="Font28.h" />
+    <ClInclude Include="GibFX.h" />
+    <ClInclude Include="GibTypes.h" />
+    <ClInclude Include="JoystickMenu.h" />
+    <ClInclude Include="JuggernautFX.h" />
+    <ClInclude Include="KeyboardMenu.h" />
+    <ClInclude Include="LaserCannonFX.h" />
+    <ClInclude Include="LightFX.h" />
+    <ClInclude Include="LineBallFX.h" />
+    <ClInclude Include="LoadLevelMenu.h" />
+    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="MarkSFX.h" />
+    <ClInclude Include="MessageMgr.h" />
+    <ClInclude Include="MissionObjectives.h" />
+    <ClInclude Include="ModelFuncs.h" />
+    <ClInclude Include="ModelIds.h" />
+    <ClInclude Include="MouseMenu.h" />
+    <ClInclude Include="Music.h" />
+    <ClInclude Include="NetInfo.h" />
+    <ClInclude Include="NetStart.h" />
+    <ClInclude Include="OptionsMenu.h" />
+    <ClInclude Include="ParticleExplosionFX.h" />
+    <ClInclude Include="ParticleSystemFX.h" />
+    <ClInclude Include="ParticleTrailFX.h" />
+    <ClInclude Include="ParticleTrailSegmentFX.h" />
+    <ClInclude Include="PickupItemFX.h" />
+    <ClInclude Include="plasma.h" />
+    <ClInclude Include="PlayerCamera.h" />
+    <ClInclude Include="PlayerFX.h" />
+    <ClInclude Include="PlayerInventory.h" />
+    <ClInclude Include="PlayerModeTypes.h" />
+    <ClInclude Include="PlayerStats.h" />
+    <ClInclude Include="PolyGridFX.h" />
+    <ClInclude Include="PopupMenu.h" />
+    <ClInclude Include="PopupMenuIDs.h" />
+    <ClInclude Include="ProjectileFX.h" />
+    <ClInclude Include="ProjectileFXTypes.h" />
+    <ClInclude Include="RiotClientShell.h" />
+    <ClInclude Include="RiotCommandIDs.h" />
+    <ClInclude Include="RiotCommonUtilities.h" />
+    <ClInclude Include="RiotMenu.h" />
+    <ClInclude Include="RiotMsgIDs.h" />
+    <ClInclude Include="RiotSettings.h" />
+    <ClInclude Include="RiotSoundTypes.h" />
+    <ClInclude Include="RiotWeaponModels.h" />
+    <ClInclude Include="RocketFlareFX.h" />
+    <ClInclude Include="SFXMgr.h" />
+    <ClInclude Include="SFXMsgIds.h" />
+    <ClInclude Include="ShellCasingFX.h" />
+    <ClInclude Include="SinglePlayerMenu.h" />
+    <ClInclude Include="Slider.h" />
+    <ClInclude Include="SmokeFX.h" />
+    <ClInclude Include="SmokeSphereFX.h" />
+    <ClInclude Include="SoundOptionsMenu.h" />
+    <ClInclude Include="SparksFX.h" />
+    <ClInclude Include="SpecialFX.h" />
+    <ClInclude Include="SpecialFXList.h" />
+    <ClInclude Include="SpriteFX.h" />
+    <ClInclude Include="SurfaceTypes.h" />
+    <ClInclude Include="TextHelper.h" />
+    <ClInclude Include="TracerFX.h" />
+    <ClInclude Include="VKDefs.h" />
+    <ClInclude Include="VolumeBrushFX.h" />
+    <ClInclude Include="WeaponDefs.h" />
+    <ClInclude Include="WeaponFX.h" />
+    <ClInclude Include="WeaponFXTypes.h" />
+    <ClInclude Include="WeaponModel.h" />
+    <ClInclude Include="WeaponSoundFX.h" />
+    <ClInclude Include="WinUtil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ClientShellDLL.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

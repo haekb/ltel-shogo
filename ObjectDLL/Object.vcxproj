@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Demo Debug|Win32">
+      <Configuration>Demo Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Demo Release|Win32">
+      <Configuration>Demo Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2087C6F4-988B-4CBE-9F7A-152A4E55B7C3}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Demo Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Demo Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Demo Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Demo Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Demo Debug|Win32'">
+    <OutDir>.\Object_2\</OutDir>
+    <IntDir>.\Object_2\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Demo Release|Win32'">
+    <OutDir>.\Object_1\</OutDir>
+    <IntDir>.\Object_1\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>..\appheaders;..\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;RIOT_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\Object.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\Object.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\Object.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>..\Shogo\Object.lto</OutputFile>
+      <ImportLibrary>.\Release\Object.lib</ImportLibrary>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Demo Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\appheaders;..\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;RIOT_BUILD;_DEMO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Object_2\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Object_2\Object.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader />
+      <ObjectFileName>.\Object_2\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Object_2\</ProgramDataBaseFileName>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy Debug\Object.pdb ..\*.*</Command>
+      <Message>Copying                                                                                                                                                                                                Object.pdb                                                                                                                                                                                                                         to                                                                                                                                                                                     ..\</Message>
+    </PostBuildEvent>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Object_2\Object.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Object_2\Object.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>\games\shogodemo\shogodem\Object.lto</OutputFile>
+      <ImportLibrary>.\Object_2\Object.lib</ImportLibrary>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Demo Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>..\appheaders;..\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;RIOT_BUILD;_DEMO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Object_1\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Object_1\Object.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Object_1\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Object_1\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Object_1\Object.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Object_1\Object.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>\games\shogodemo\shogodem\Object.lto</OutputFile>
+      <ImportLibrary>.\Object_1\Object.lib</ImportLibrary>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\appheaders;..\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;RIOT_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Debug\Object.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader />
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy Debug\Object.pdb ..\*.*</Command>
+      <Message>Copying                                                                                                                                                                                                Object.pdb                                                                                                                                                                                                                         to                                                                                                                                                                                     ..\</Message>
+    </PostBuildEvent>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\Object.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\Object.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>..\Shogo\Object.lto</OutputFile>
+      <ImportLibrary>.\Debug\Object.lib</ImportLibrary>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\appheaders\cpp_engineobjects_de.cpp" />
+    <ClCompile Include="..\Shared\DebrisTypes.cpp" />
+    <ClCompile Include="..\Shared\ModelFuncs.cpp" />
+    <ClCompile Include="..\Shared\RiotCommonUtilities.cpp" />
+    <ClCompile Include="..\Shared\WeaponDefs.cpp" />
+    <ClCompile Include="Activation.cpp" />
+    <ClCompile Include="Admiral.cpp" />
+    <ClCompile Include="AdvSound.cpp" />
+    <ClCompile Include="AIKey.cpp" />
+    <ClCompile Include="AIKeyData.cpp" />
+    <ClCompile Include="AIPathMgr.cpp" />
+    <ClCompile Include="AISounds.cpp" />
+    <ClCompile Include="Akuma.cpp" />
+    <ClCompile Include="Andra10.cpp" />
+    <ClCompile Include="Andra5.cpp" />
+    <ClCompile Include="ArmorBase.cpp" />
+    <ClCompile Include="ArmorRepair.cpp" />
+    <ClCompile Include="Assassin.cpp" />
+    <ClCompile Include="AVC.cpp" />
+    <ClCompile Include="Baku.cpp" />
+    <ClCompile Include="BaseAI.cpp" />
+    <ClCompile Include="BaseCharacter.cpp" />
+    <ClCompile Include="BodyArmor.cpp" />
+    <ClCompile Include="BodyProp.cpp" />
+    <ClCompile Include="Bouncer.cpp" />
+    <ClCompile Include="CachedFiles.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Cat.cpp" />
+    <ClCompile Include="CharacterAttributes.cpp" />
+    <ClCompile Include="CharacterMgr.cpp" />
+    <ClCompile Include="Civilian1.cpp" />
+    <ClCompile Include="Civilian2.cpp" />
+    <ClCompile Include="ClientCastLineSFX.cpp" />
+    <ClCompile Include="ClientDeathSFX.cpp" />
+    <ClCompile Include="ClientLightFX.cpp" />
+    <ClCompile Include="ClientSFX.cpp" />
+    <ClCompile Include="ClientWeaponSFX.cpp" />
+    <ClCompile Include="Cothineal.cpp" />
+    <ClCompile Include="DebrisFuncs.cpp" />
+    <ClCompile Include="Destructable.cpp" />
+    <ClCompile Include="DestructableDoor.cpp" />
+    <ClCompile Include="DestructableRotatingDoor.cpp" />
+    <ClCompile Include="DestructableWorldModel.cpp" />
+    <ClCompile Include="DialogTrigger.cpp" />
+    <ClCompile Include="Door.cpp" />
+    <ClCompile Include="Dropship.cpp" />
+    <ClCompile Include="EliteShockTrooper.cpp" />
+    <ClCompile Include="EliteTrooper.cpp" />
+    <ClCompile Include="Enforcer.cpp" />
+    <ClCompile Include="EnhancementItem.cpp" />
+    <ClCompile Include="Enhancements.cpp" />
+    <ClCompile Include="ExitTrigger.cpp" />
+    <ClCompile Include="Explosion.cpp" />
+    <ClCompile Include="FirstAid.cpp" />
+    <ClCompile Include="FirstAidBase.cpp" />
+    <ClCompile Include="Gabriel.cpp" />
+    <ClCompile Include="GameStartPoint.cpp" />
+    <ClCompile Include="GlassProp.cpp" />
+    <ClCompile Include="Hammerhead.cpp" />
+    <ClCompile Include="Hank.cpp" />
+    <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="InventoryItem.cpp" />
+    <ClCompile Include="Kathryn.cpp" />
+    <ClCompile Include="Key.cpp" />
+    <ClCompile Include="KeyData.cpp" />
+    <ClCompile Include="KeyFramer.cpp" />
+    <ClCompile Include="Kura.cpp" />
+    <ClCompile Include="LaserTrigger.cpp" />
+    <ClCompile Include="Lift.cpp" />
+    <ClCompile Include="LittleKid.cpp" />
+    <ClCompile Include="MajorCharacter.cpp" />
+    <ClCompile Include="Music.cpp" />
+    <ClCompile Include="ObjectiveTrigger.cpp" />
+    <ClCompile Include="object_list.cpp" />
+    <ClCompile Include="Officer.cpp" />
+    <ClCompile Include="Ordog.cpp" />
+    <ClCompile Include="ParticleSystem.cpp" />
+    <ClCompile Include="PickupItem.cpp" />
+    <ClCompile Include="PlayerMode.cpp" />
+    <ClCompile Include="PlayerObj.cpp" />
+    <ClCompile Include="PolyGrid.cpp" />
+    <ClCompile Include="PowerSurge.cpp" />
+    <ClCompile Include="Powerup.cpp" />
+    <ClCompile Include="Predator.cpp" />
+    <ClCompile Include="Projectile.cpp" />
+    <ClCompile Include="Prop.cpp" />
+    <ClCompile Include="PVWeaponModel.cpp" />
+    <ClCompile Include="Raksha.cpp" />
+    <ClCompile Include="Rascal.cpp" />
+    <ClCompile Include="RiotObjectUtilities.cpp" />
+    <ClCompile Include="RiotProjectiles.cpp" />
+    <ClCompile Include="RiotServerShell.cpp" />
+    <ClCompile Include="RiotWeapons.cpp" />
+    <ClCompile Include="RotatingDoor.cpp" />
+    <ClCompile Include="RotatingWorldModel.cpp" />
+    <ClCompile Include="Ruin150.cpp" />
+    <ClCompile Include="Ryo.cpp" />
+    <ClCompile Include="Samantha.cpp" />
+    <ClCompile Include="Sanjuro.cpp" />
+    <ClCompile Include="ScaleSprite.cpp" />
+    <ClCompile Include="ShockTrooper.cpp" />
+    <ClCompile Include="ShogoSecret.cpp" />
+    <ClCompile Include="Sparam.cpp" />
+    <ClCompile Include="Sparrowhawk.cpp" />
+    <ClCompile Include="Spawner.cpp" />
+    <ClCompile Include="SSFXReg.cpp" />
+    <ClCompile Include="StoryTrigger.cpp" />
+    <ClCompile Include="Tenma.cpp" />
+    <ClCompile Include="Toshiro.cpp" />
+    <ClCompile Include="TractorBeam.cpp" />
+    <ClCompile Include="TransmissionTrigger.cpp" />
+    <ClCompile Include="Trigger.cpp" />
+    <ClCompile Include="TriggerSound.cpp" />
+    <ClCompile Include="Trooper.cpp" />
+    <ClCompile Include="UhlanA3.cpp" />
+    <ClCompile Include="UltraPowerupItem.cpp" />
+    <ClCompile Include="UltraPowerups.cpp" />
+    <ClCompile Include="UpgradeItem.cpp" />
+    <ClCompile Include="Upgrades.cpp" />
+    <ClCompile Include="Vandal.cpp" />
+    <ClCompile Include="Vehicle.cpp" />
+    <ClCompile Include="Vigilance.cpp" />
+    <ClCompile Include="VolumeBrush.cpp" />
+    <ClCompile Include="VolumeBrushTypes.cpp" />
+    <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="WeaponPowerups.cpp" />
+    <ClCompile Include="Weapons.cpp" />
+    <ClCompile Include="WorldModelDebris.cpp" />
+    <ClCompile Include="WorldProperties.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Activation.h" />
+    <ClInclude Include="Admiral.h" />
+    <ClInclude Include="AdvSound.h" />
+    <ClInclude Include="AIKey.h" />
+    <ClInclude Include="AIKeyData.h" />
+    <ClInclude Include="AIPathList.h" />
+    <ClInclude Include="AIPathMgr.h" />
+    <ClInclude Include="AIScriptList.h" />
+    <ClInclude Include="AISounds.h" />
+    <ClInclude Include="Akuma.h" />
+    <ClInclude Include="Andra10.h" />
+    <ClInclude Include="Andra5.h" />
+    <ClInclude Include="ArmorBase.h" />
+    <ClInclude Include="ArmorRepair.h" />
+    <ClInclude Include="Assassin.h" />
+    <ClInclude Include="AVC.h" />
+    <ClInclude Include="Baku.h" />
+    <ClInclude Include="BaseAI.h" />
+    <ClInclude Include="BaseCharacter.h" />
+    <ClInclude Include="BodyArmor.h" />
+    <ClInclude Include="BodyProp.h" />
+    <ClInclude Include="Bouncer.h" />
+    <ClInclude Include="CachedFiles.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Cat.h" />
+    <ClInclude Include="CharacterAlignment.h" />
+    <ClInclude Include="CharacterAttributes.h" />
+    <ClInclude Include="CharacterMgr.h" />
+    <ClInclude Include="CheatDefs.h" />
+    <ClInclude Include="Civilian1.h" />
+    <ClInclude Include="Civilian2.h" />
+    <ClInclude Include="ClientCastLineSFX.h" />
+    <ClInclude Include="ClientDeathSFX.h" />
+    <ClInclude Include="ClientLightFX.h" />
+    <ClInclude Include="ClientServerShared.h" />
+    <ClInclude Include="ClientSFX.h" />
+    <ClInclude Include="ClientWeaponSFX.h" />
+    <ClInclude Include="ContainerCodes.h" />
+    <ClInclude Include="Cothineal.h" />
+    <ClInclude Include="DamageTypes.h" />
+    <ClInclude Include="DebrisFuncs.h" />
+    <ClInclude Include="DebrisTypes.h" />
+    <ClInclude Include="Destructable.h" />
+    <ClInclude Include="DestructableDoor.h" />
+    <ClInclude Include="DestructableRotatingDoor.h" />
+    <ClInclude Include="DestructableWorldModel.h" />
+    <ClInclude Include="DialogTrigger.h" />
+    <ClInclude Include="Door.h" />
+    <ClInclude Include="Dropship.h" />
+    <ClInclude Include="EliteShockTrooper.h" />
+    <ClInclude Include="EliteTrooper.h" />
+    <ClInclude Include="Enforcer.h" />
+    <ClInclude Include="EnhancementItem.h" />
+    <ClInclude Include="Enhancements.h" />
+    <ClInclude Include="ExitTrigger.h" />
+    <ClInclude Include="Explosion.h" />
+    <ClInclude Include="FirstAid.h" />
+    <ClInclude Include="FirstAidBase.h" />
+    <ClInclude Include="Gabriel.h" />
+    <ClInclude Include="GameStartPoint.h" />
+    <ClInclude Include="GibTypes.h" />
+    <ClInclude Include="GlassProp.h" />
+    <ClInclude Include="HammerHead.h" />
+    <ClInclude Include="Hank.h" />
+    <ClInclude Include="Inventory.h" />
+    <ClInclude Include="InventoryItem.h" />
+    <ClInclude Include="InventoryTypes.h" />
+    <ClInclude Include="Kathryn.h" />
+    <ClInclude Include="Key.h" />
+    <ClInclude Include="KeyData.h" />
+    <ClInclude Include="KeyFramer.h" />
+    <ClInclude Include="Kura.h" />
+    <ClInclude Include="LaserTrigger.h" />
+    <ClInclude Include="Lift.h" />
+    <ClInclude Include="LittleKid.h" />
+    <ClInclude Include="MajorCharacter.h" />
+    <ClInclude Include="ModelFuncs.h" />
+    <ClInclude Include="ModelIds.h" />
+    <ClInclude Include="ModelImpact.h" />
+    <ClInclude Include="ModelNodes.h" />
+    <ClInclude Include="ModelObject.h" />
+    <ClInclude Include="Music.h" />
+    <ClInclude Include="ObjectiveTrigger.h" />
+    <ClInclude Include="ObjectUtilities.h" />
+    <ClInclude Include="Officer.h" />
+    <ClInclude Include="Ordog.h" />
+    <ClInclude Include="ParticleSystem.h" />
+    <ClInclude Include="PickupItem.h" />
+    <ClInclude Include="PlayerMode.h" />
+    <ClInclude Include="PlayerModeTypes.h" />
+    <ClInclude Include="PlayerObj.h" />
+    <ClInclude Include="PolyGrid.h" />
+    <ClInclude Include="PowerSurge.h" />
+    <ClInclude Include="Powerup.h" />
+    <ClInclude Include="Predator.h" />
+    <ClInclude Include="Projectile.h" />
+    <ClInclude Include="ProjectileFXTypes.h" />
+    <ClInclude Include="Prop.h" />
+    <ClInclude Include="PVWeaponModel.h" />
+    <ClInclude Include="Raksha.h" />
+    <ClInclude Include="Rascal.h" />
+    <ClInclude Include="RiotCommandIDs.h" />
+    <ClInclude Include="RiotCommonUtilities.h" />
+    <ClInclude Include="RiotMsgIDs.h" />
+    <ClInclude Include="RiotObjectUtilities.h" />
+    <ClInclude Include="RiotProjectiles.h" />
+    <ClInclude Include="RiotServerShell.h" />
+    <ClInclude Include="RiotSoundTypes.h" />
+    <ClInclude Include="RiotWeapons.h" />
+    <ClInclude Include="RotatingDoor.h" />
+    <ClInclude Include="RotatingWorldModel.h" />
+    <ClInclude Include="Ruin150.h" />
+    <ClInclude Include="Ryo.h" />
+    <ClInclude Include="Samantha.h" />
+    <ClInclude Include="ScaleSprite.h" />
+    <ClInclude Include="SFXMsgIds.h" />
+    <ClInclude Include="ShockTrooper.h" />
+    <ClInclude Include="ShogoSecret.h" />
+    <ClInclude Include="SparrowHawk.h" />
+    <ClInclude Include="Spawner.h" />
+    <ClInclude Include="StoryTrigger.h" />
+    <ClInclude Include="SurfaceFunctions.h" />
+    <ClInclude Include="SurfaceTypes.h" />
+    <ClInclude Include="TemplateList.h" />
+    <ClInclude Include="Tenma.h" />
+    <ClInclude Include="Toshiro.h" />
+    <ClInclude Include="TractorBeam.h" />
+    <ClInclude Include="TransmissionTrigger.h" />
+    <ClInclude Include="Trigger.h" />
+    <ClInclude Include="TriggerSound.h" />
+    <ClInclude Include="Trooper.h" />
+    <ClInclude Include="UhlanA3.h" />
+    <ClInclude Include="UltraPowerupItem.h" />
+    <ClInclude Include="UltraPowerups.h" />
+    <ClInclude Include="UpgradeItem.h" />
+    <ClInclude Include="Upgrades.h" />
+    <ClInclude Include="Vandal.h" />
+    <ClInclude Include="Vehicle.h" />
+    <ClInclude Include="Vigilance.h" />
+    <ClInclude Include="VolumeBrush.h" />
+    <ClInclude Include="VolumeBrushTypes.h" />
+    <ClInclude Include="Warrior.h" />
+    <ClInclude Include="Weapon.h" />
+    <ClInclude Include="WeaponFXTypes.h" />
+    <ClInclude Include="WeaponPowerups.h" />
+    <ClInclude Include="Weapons.h" />
+    <ClInclude Include="WorldModelDebris.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
